@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو كبستي || menu kabsty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="header" dir="ltr">
+        <a href="#" class="logo">
+            <img style="width: 90px; border-radius: 50%;" src="img/1بروفيل.png" alt="">
+        </a>
+    
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
+        <div class="nav" id="navbar">
+            <ul>
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#extra">إضافات</a></li>
+                <li><a href="#drinks">المشروبات</a></li>
+                <li><a href="#salad">السلطات</a></li>
+                <li id="l"><a href="#food">الوجبات</a></li>
+            </ul>
+        </div>
+    </div>
+      
+    <div class="menu-container">
+        <h2>📋 قائمة الطعام</h2>
+        <section id="food" class="menu-section">
+            <h3>🍗 الكبسة</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="img/كبسه كامله.png" alt="كبسة كبيره">
+                    <h4>فرخه كامله</h4>
+                    <p id="disc">فرخه كامله | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
+                    <p id="price">390 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="img/كبسة-0.jpg" alt="كبسة دجاج">
+                    <h4>نص فرخه</h4>
+                    <p id="disc">نص فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
+                    <p id="price">265 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="img/كبسه ربع.webp" alt="كبسة لحم">
+                    <h4>ربع فرخه</h4>
+                    <p id="disc">ربع فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
+                    <p id="price">185 جنيه</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="salad" class="menu-section">
+            <h3>🥗 السَّلطات</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="img/سلطه خضراء.webp" alt="سلطة خضراء">
+                    <h4>سلطة خضراء</h4>
+                    <p id="price">15 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="img/سلطه زبادي.jpg" alt="سلطة زبادي">
+                    <h4>سلطة زبادي</h4>
+                    <p id="price">25 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="img/طحينه.jpeg" alt="سلطة طحينة">
+                    <h4>سلطة طحينة</h4>
+                    <p id="price">20 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="img/سلطه دقوس.webp" alt="سلطة يونانية">
+                    <h4>سلطة دقوس</h4>
+                    <p id="price">25 جنيه</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="drinks" class="menu-section">
+            <h3>🧃 المشروبات</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://i.imgur.com/JUu9oRU.jpg" alt="مياه معدنية">
+                    <h4>مياه معدنية</h4>
+                    <p id="price">15 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="https://i.imgur.com/KkM1s5T.jpg" alt="بيبسي / سفن / ميرندا">
+                    <h4>مشروبات غازيه </h4>
+                    <p id="price">25 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="https://i.imgur.com/TxqAK0h.jpg" alt="عصير مانجو">
+                    <h4> عصائر</h4>
+                    <p id="price">15 جنيه</p>
+                </div>
+                <div class="card">
+                    <img src="https://i.imgur.com/O6BZPGL.jpg" alt="عصير ليمون بالنعناع">
+                    <h4> </h4>
+                    <p id="price">15 جنيه</p>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="extra" class="menu-section">
+            <h3>➕ الإضافات</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="img/زياده ارز.jpg" alt="زيادة رز">
+                    <h4>زيادة رز</h4>
+                    <p id="price">85 جنيه</p>
+                </div>
+
+                <div  class="card">
+                    <img  src="img/بطاطس.webp" alt="طبق بطاطس">
+                    <h4>طبق بطاطس</h4>
+                    <p id="price">35 جنيه</p>
+                </div>
+                <div id="trans" style="background: transparent;" class="card">
+
+                </div>
+            </div>
+
+        </section>
+
+        <div id="contact" class="notes">
+            <p>تقدر تطلب من خلال :</p>
+            <div class="links">
+               <a href=""><i class="fa-brands fa-facebook"></i></a> 
+              <a href=""><i class="fa-brands fa-instagram"></i></a> 
+            </div>
+        </div>
+
+    </div>
+    <button onclick="scrollToTop()" id="btn">↑</button>
+    <div class="footer">
+        <p> copyright © Abdullah Hassan </p>
+    </div>
+    <script>
+        // لما تسكرول لتحت 100px يظهر الزر
+        window.onscroll = function () {
+            let btn = document.getElementById("btn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // وظيفة الزر
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+       
+                function toggleMenu() {
+                    setTimeout(() => {
+                        document.getElementById("navbar").classList.toggle("active");
+                    }, 100);
+                  
+  }
+ 
+
+
+    </script>
+</body>
+
+</html>
