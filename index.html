@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- وصف الصفحة (يظهر في نتائج البحث) -->
     <meta name="description"
         content="منيو كبستي – أكل سعودي بيتي في الجيزة. فرخة، نص، ربع + سلطات ودقوس. توصيل سريع وجودة ممتازة.">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <title>منيو كبستي || menu kabsty</title>
+
+    <!-- كلمات مفتاحية -->
+    <meta name="keywords"
+        content="كبسة, كبستي, أكل سعودي, منيو, توصيل, سلطات, فراخ, أرز كبسة,kabsety,اكل سعودي ,كبسه سعوديه في مصر,الخليج في مصر, Kabsty, الجيزة, مطعم, دليفري">
+
+    <!-- اسم صاحب الموقع -->
+    <meta name="author" content="Abdullah Hassan">
+
+    <!-- تحكم في ظهور الموقع في محركات البحث -->
+    <meta name="robots" content="index, follow">
+
+    <!-- أيقونة التبويب -->
     <link rel="icon" type="image/x-icon" href="img/1بروفيل.png">
+
+    <!-- روابط ملفات التنسيق -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- العنوان -->
+    <title>منيو كبستي || menu kabsety</title>
 </head>
+  
+
 <body>
+    <!-- header -->
     <div class="header" dir="ltr">
-        <!-- <button id="themeToggle">تغيير الوضع</button> -->
         <div class="logo">
-            <img style="width: 120px; border-radius: 50%;" src="img/1بروفيل-removebg-preview.png" alt="">
-            <p>Kabsty</p>
+            <img style="width: 120px; border-radius: 50%;" src="img/1بروفيل-removebg-preview.png" alt="شعار مطعم كبستي">
+            <p>kabsety</p>
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="nav" id="navbar">
             <ul>
-                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a id="ord" href="#contact">اطلب الان</a></li>
                 <li><a href="#extra">إضافات</a></li>
-                <!-- <li><a href="#drinks">المشروبات</a></li> -->
                 <li><a href="#salad">السلطات</a></li>
                 <li id="l"><a href="#food">الوجبات</a></li>
             </ul>
         </div>
     </div>
+
+    <!-- قسم الماكولات -->
     <div class="menu-container">
         <h2>📋 قائمة الطعام</h2>
         <section id="food" class="menu-section">
             <h3>🍗 كبسه فراخ</h3>
             <div class="card-grid">
                 <div class="card">
-                    <img src="img/كبسه كامله.png" alt="كبسة كبيره">
+                    <img loading="lazy" src="img/كبسه كامله.png" alt="كبسة كبيره">
                     <h4>فرخه كامله</h4>
-                    <p id="disc">فرخه كامله | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
-                    <p id="price">390 جنيه</p>
+                    <p class="disc">فرخه كامله | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
+                    <p class="price">390 جنيه</p>
                 </div>
                 <div class="card">
-                    <img src="img/كبسة-0.jpg" alt="كبسة دجاج">
+                    <img loading="lazy" src="img/كبسة-0.jpg" alt="كبسة دجاج">
                     <h4>نص فرخه</h4>
-                    <p id="disc">نص فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
-                    <p id="price">265 جنيه</p>
+                    <p class="disc">نص فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
+                    <p class="price">265 جنيه</p>
                 </div>
                 <div class="card">
-                    <img src="img/كبسه ربع.webp" alt="كبسة لحم">
+                    <img loading="lazy" src="img/كبسه ربع.webp" alt="كبسة لحم">
                     <h4>ربع فرخه</h4>
-                    <p id="disc">ربع فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
-                    <p id="price">185 جنيه</p>
+                    <p class="disc">ربع فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
+                    <p class="price">185 جنيه</p>
                 </div>
             </div>
         </section>
+
+        <!-- قسم السلطات -->
         <section id="salad" class="menu-section">
             <h3>🥗 السَّلطات</h3>
             <div class="card-grid">
                 <div class="card">
-                    <img src="img/سلطه خضراء.webp" alt="سلطة خضراء">
+                    <img loading="lazy" src="img/سلطه خضراء.webp" alt="سلطة خضراء">
                     <h4>سلطة خضراء</h4>
-                    <p id="price">15 جنيه</p>
+                    <p class="price">15 جنيه</p>
                 </div>
                 <div class="card">
-                    <img src="img/سلطه زبادي.jpg" alt="سلطة زبادي">
+                    <img loading="lazy" src="img/سلطه زبادي.jpg" alt="سلطة زبادي">
                     <h4>سلطة زبادي</h4>
-                    <p id="price">25 جنيه</p>
+                    <p class="price">25 جنيه</p>
                 </div>
                 <div class="card">
-                    <img src="img/طحينه.jpeg" alt="سلطة طحينة">
+                    <img loading="lazy" src="img/طحينه.jpeg" alt="سلطة طحينة">
                     <h4>سلطة طحينة</h4>
-                    <p id="price">20 جنيه</p>
+                    <p class="price">20 جنيه</p>
                 </div>
                 <div class="card">
-                    <img src="img/سلطه دقوس.webp" alt="سلطة يونانية">
+                    <img loading="lazy" src="img/سلطه دقوس.webp" alt="سلطة دقوس">
                     <h4>سلطة دقوس</h4>
-                    <p id="price">25 جنيه</p>
+                    <p class="price">25 جنيه</p>
                 </div>
             </div>
         </section>
-        <!-- <section id="drinks" class="menu-section">
-            <h3>🧃 المشروبات</h3>
-            <div class="card-grid">
-                <div class="card">
-                    <img src="https://i.imgur.com/JUu9oRU.jpg" alt="مياه معدنية">
-                    <h4>مياه معدنية</h4>
-                    <p id="price">15 جنيه</p>
-                </div>
-                <div class="card">
-                    <img src="https://i.imgur.com/KkM1s5T.jpg" alt="بيبسي / سفن / ميرندا">
-                    <h4>مشروبات غازيه </h4>
-                    <p id="price">25 جنيه</p>
-                </div>
-                <div class="card">
-                    <img src="https://i.imgur.com/TxqAK0h.jpg" alt="عصير مانجو">
-                    <h4> عصائر</h4>
-                    <p id="price">15 جنيه</p>
-                </div>
-                <div class="card">
-                    <img src="https://i.imgur.com/O6BZPGL.jpg" alt="عصير ليمون بالنعناع">
-                    <h4> </h4>
-                    <p id="price">15 جنيه</p>
-                </div>
-            </div>
-        </section> -->
+
+        <!-- قسم الاضافات -->
         <section id="extra" class="menu-section">
             <h3>➕ الإضافات</h3>
             <div class="card-grid">
                 <div class="card">
-                    <img src="img/زياده ارز.jpg" alt="زيادة رز">
+                    <img loading="lazy" src="img/زياده ارز.jpg" alt="زيادة رز">
                     <h4>زيادة ارز</h4>
-                    <p id="price">85 جنيه</p>
+                    <p class="price">85 جنيه</p>
                 </div>
                 <div class="card">
-                    <img src="img/بطاطس.webp" alt="طبق بطاطس">
+                    <img loading="lazy" src="img/بطاطس.webp" alt="طبق بطاطس">
                     <h4>طبق بطاطس</h4>
-                    <p id="price">35 جنيه</p>
+                    <p class="price">35 جنيه</p>
                 </div>
-                <div id="trans" style="background: transparent;" class="card">
-
-                </div>
+                <div id="trans" class="card" style="background: transparent;" aria-hidden="true"></div>
             </div>
         </section>
+
+        <!-- قسم التواصل -->
         <div id="contact" class="notes">
             <p>تقدر تطلب من خلال :</p>
             <div class="links">
@@ -131,27 +131,33 @@
             </div>
         </div>
     </div>
+
+    <!-- زر العودة للأعلى -->
     <button onclick="scrollToTop()" id="btn">↑</button>
+
+    <!-- الفوتر -->
     <div class="footer">
         <p> copyright © Abdullah Hassan </p>
     </div>
+
+    <!-- اسكريبت -->
     <script>
-        // لما تسكرول لتحت 100px يظهر الزر
         window.onscroll = function () {
             let btn = document.getElementById("btn");
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 btn.style.display = "block";
             } else {
                 btn.style.display = "none";
             }
         };
-        // وظيفة الزر
+
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
         }
+
         function toggleMenu() {
             setTimeout(() => {
                 document.getElementById("navbar").classList.toggle("active");

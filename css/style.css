@@ -1,3 +1,14 @@
+*{
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #ff9900;
+  --text-color: #222;
+  --bg-color: #fff;
+}
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -7,7 +18,7 @@ body {
   padding: 0;
   font-family: "Cairo", sans-serif;
   background-color: #f9f9f9;
-  color: #222;
+ color: var(--text-color);
   direction: rtl;
 }
 
@@ -18,7 +29,7 @@ body {
   justify-content: space-around;
   padding: 10px 20px;
   background-color: #ffffff;
-  color: #222;
+ color: var(--text-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .header::before {
@@ -44,6 +55,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 10px;
   letter-spacing: 3px;
+  
 }
 
 .nav ul {
@@ -52,18 +64,19 @@ body {
   gap: 20px;
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
 }
 
 .nav ul li a {
   text-decoration: none;
-  color: #222;
+ color: var(--text-color);
   font-weight: bold;
   transition: color 0.3s ease;
   padding-right: 25px;
 }
 
 .nav ul li a:hover {
-  color: #ff9900;
+  color: var(--main-color);
 }
 
 .menu-toggle {
@@ -71,10 +84,36 @@ body {
   font-size: 24px;
   background: none;
   border: none;
-  color: #222;
+ color: var(--text-color);
   cursor: pointer;
 }
-
+@media (min-width: 768px) {
+  #ord {
+    position: relative;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+  }
+  #ord::after {
+    content: "";
+    background-color: #c5a640;
+    position: absolute;
+    width: 100%;
+    padding: 25px 0;
+    left: -13px;
+    top: -13px;
+    z-index: -1;
+    border-radius: 15px;
+     transition: all 0.3s ease-in-out;
+  transform-origin: center;
+    
+  }
+  
+  #ord:hover::after
+  {
+    scale: 1.1;
+  }
+  
+}
 @media (max-width: 768px) {
   .header {
     justify-content: space-between;
@@ -135,7 +174,7 @@ body {
 
 h2,
 h3 {
-  color: #ff9900;
+  color: var(--main-color);
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -159,7 +198,7 @@ li {
   /* background-color: #ccc; */
   padding: 5px;
   border-radius: 15%;
-  color: #222;
+ color: var(--text-color);
 }
 .notes .links span {
   font-size: 17px;
@@ -183,7 +222,7 @@ li {
 
 .card {
   background-color: #ffffff;
-  color: #222;
+ color: var(--text-color);
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
@@ -208,18 +247,22 @@ li {
 .card h4 {
   margin: 10px 0 5px;
   font-size: 1.2em;
-  color: #222;
+ color: var(--text-color);
 }
 
-.card #disc {
+.card .disc {
   font-size: 13px;
 }
 
-.card #price {
-  margin: 0;
-  font-size: 1em;
-  color: #ff9900;
+.card .price {
+
+    font-size: 1em;
+    color: var(--main-color);
+    font-weight: bold;
+  
+  
 }
+
 
 #btn {
   position: fixed;
@@ -227,11 +270,12 @@ li {
   right: 2em;
   font-size: 30px;
   color: white;
-  background-color: #ff9900;
+  background-color: var(--main-color);
   border: none;
   padding: 13px 25px;
   border-radius: 50%;
   transition: 0.5s;
+  box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
 }
 
 #btn:hover {
@@ -240,20 +284,17 @@ li {
 }
 
 .footer {
-  background-color: #eeeeee;
-  color: #7943cf;
+  background-color: var(--main-color);
+ color: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: end;
 }
 
 .footer p {
-  font-size: 18px;
-  font-weight: 700;
-  padding-left: 60px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 16px;
 }
 
 @media (max-width: 600px) {
@@ -261,9 +302,10 @@ li {
     padding: 20px;
     margin: 23px 20px;
   }
-  .card #disc {
+  .card .disc {
     font-size: 12px;
   }
+  
   .card img {
     height: 150px;
   }
@@ -288,7 +330,7 @@ li {
   .notes .links a i {
     font-size: 30px;
     background-color: #ffffff;
-    color: #222;
+   color: var(--text-color);
   }
   #btn {
     right: 15px;
