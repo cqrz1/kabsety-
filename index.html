@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +10,15 @@
     <link rel="icon" type="image/x-icon" href="img/1بروفيل.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-
 <body>
     <div class="header" dir="ltr">
         <!-- <button id="themeToggle">تغيير الوضع</button> -->
-
         <div class="logo">
-            <img style="width: 120px; border-radius: 50%;" src="img/1بروفيل.png" alt="">
+            <img style="width: 120px; border-radius: 50%;" src="img/1بروفيل-removebg-preview.png" alt="">
             <p>Kabsty</p>
         </div>
-
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
         <div class="nav" id="navbar">
             <ul>
                 <li><a href="#contact">تواصل معنا</a></li>
@@ -35,11 +29,10 @@
             </ul>
         </div>
     </div>
-
     <div class="menu-container">
         <h2>📋 قائمة الطعام</h2>
         <section id="food" class="menu-section">
-            <h3>🍗 الكبسة</h3>
+            <h3>🍗 كبسه فراخ</h3>
             <div class="card-grid">
                 <div class="card">
                     <img src="img/كبسه كامله.png" alt="كبسة كبيره">
@@ -59,10 +52,8 @@
                     <p id="disc">ربع فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
                     <p id="price">185 جنيه</p>
                 </div>
-
             </div>
         </section>
-
         <section id="salad" class="menu-section">
             <h3>🥗 السَّلطات</h3>
             <div class="card-grid">
@@ -88,7 +79,6 @@
                 </div>
             </div>
         </section>
-
         <!-- <section id="drinks" class="menu-section">
             <h3>🧃 المشروبات</h3>
             <div class="card-grid">
@@ -114,16 +104,14 @@
                 </div>
             </div>
         </section> -->
-
         <section id="extra" class="menu-section">
             <h3>➕ الإضافات</h3>
             <div class="card-grid">
                 <div class="card">
                     <img src="img/زياده ارز.jpg" alt="زيادة رز">
-                    <h4>زيادة رز</h4>
+                    <h4>زيادة ارز</h4>
                     <p id="price">85 جنيه</p>
                 </div>
-
                 <div class="card">
                     <img src="img/بطاطس.webp" alt="طبق بطاطس">
                     <h4>طبق بطاطس</h4>
@@ -133,17 +121,15 @@
 
                 </div>
             </div>
-
         </section>
-
         <div id="contact" class="notes">
             <p>تقدر تطلب من خلال :</p>
             <div class="links">
                 <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <span>او</span>
                 <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-
     </div>
     <button onclick="scrollToTop()" id="btn">↑</button>
     <div class="footer">
@@ -159,7 +145,6 @@
                 btn.style.display = "none";
             }
         };
-
         // وظيفة الزر
         function scrollToTop() {
             window.scrollTo({
@@ -167,17 +152,11 @@
                 behavior: "smooth"
             });
         }
-
         function toggleMenu() {
             setTimeout(() => {
                 document.getElementById("navbar").classList.toggle("active");
             }, 100);
         }
-
-
-
-
-
     </script>
 </body>
 
