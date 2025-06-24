@@ -4,34 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="منيو كبستي – أكل سعودي بيتي في الجيزة. فرخة، نص، ربع + سلطات ودقوس. توصيل سريع وجودة ممتازة.">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <title>منيو كبستي || menu kabsty</title>
     <link rel="icon" type="image/x-icon" href="img/1بروفيل.png">
-
     <link rel="stylesheet" href="css/style.css">
-   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
     <div class="header" dir="ltr">
+        <!-- <button id="themeToggle">تغيير الوضع</button> -->
+
         <div class="logo">
-            <img style="width: 90px; border-radius: 50%;" src="img/1بروفيل.png" alt="">
+            <img style="width: 120px; border-radius: 50%;" src="img/1بروفيل.png" alt="">
+            <p>Kabsty</p>
         </div>
-    
+
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    
+
         <div class="nav" id="navbar">
             <ul>
                 <li><a href="#contact">تواصل معنا</a></li>
                 <li><a href="#extra">إضافات</a></li>
-                <li><a href="#drinks">المشروبات</a></li>
+                <!-- <li><a href="#drinks">المشروبات</a></li> -->
                 <li><a href="#salad">السلطات</a></li>
                 <li id="l"><a href="#food">الوجبات</a></li>
             </ul>
         </div>
     </div>
-      
+
     <div class="menu-container">
         <h2>📋 قائمة الطعام</h2>
         <section id="food" class="menu-section">
@@ -120,8 +124,8 @@
                     <p id="price">85 جنيه</p>
                 </div>
 
-                <div  class="card">
-                    <img  src="img/بطاطس.webp" alt="طبق بطاطس">
+                <div class="card">
+                    <img src="img/بطاطس.webp" alt="طبق بطاطس">
                     <h4>طبق بطاطس</h4>
                     <p id="price">35 جنيه</p>
                 </div>
@@ -135,8 +139,8 @@
         <div id="contact" class="notes">
             <p>تقدر تطلب من خلال :</p>
             <div class="links">
-               <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a> 
-              <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a> 
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
 
@@ -163,14 +167,15 @@
                 behavior: "smooth"
             });
         }
-       
-                function toggleMenu() {
-                    setTimeout(() => {
-                        document.getElementById("navbar").classList.toggle("active");
-                    }, 100);
-                  
-  }
- 
+
+        function toggleMenu() {
+            setTimeout(() => {
+                document.getElementById("navbar").classList.toggle("active");
+            }, 100);
+        }
+
+
+
 
 
     </script>
