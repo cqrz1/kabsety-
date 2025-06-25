@@ -30,7 +30,10 @@
     <link rel="icon" type="image/x-icon" href="img/1بروفيل.png" />
 
     <!-- روابط ملفات التنسيق -->
+    <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- cart css  -->
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <script>
@@ -64,8 +67,8 @@
             خصم 15% من يوم 1/7 الي 20/7
         </div>
     </div>
-      
-      
+
+
     <!-- قسم الماكولات -->
     <div class="menu-container">
         <h2>📋 قائمة الطعام</h2>
@@ -73,25 +76,28 @@
             <h3>🍗 كبسه فراخ</h3>
             <div class="card-grid">
                 <div class="card">
-                    <img loading="lazy" src="img/كبسه كامله.png" alt=" دجاجه كامله ">
+                    <img loading="lazy" src="img/كبسه كامله.png" alt=" فرخه كامله ">
                     <h4>فرخه كامله</h4>
                     <p class="disc">فرخه كامله | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
                     <span class="price" style="font-size: 14px;"><del>450 جنيه</del></span>
                     <p class="price">390 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('فرخه كامله', 390)">أضف للسلة</button>
                 </div>
                 <div class="card">
-                    <img loading="lazy" src="img/كبسة-0.jpg" alt=" نص دجاجه">
+                    <img loading="lazy" src="img/كبسة-0.jpg" alt=" نص فرخه">
                     <h4>نص فرخه</h4>
                     <p class="disc">نص فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
                     <span class="price" style="font-size: 14px;"><del>304 جنيه</del></span>
                     <p class="price">265 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('نص فرخه', 265)">أضف للسلة</button>
                 </div>
                 <div class="card">
-                    <img loading="lazy" src="img/كبسه ربع.webp" alt="ربع دجاجه">
+                    <img loading="lazy" src="img/كبسه ربع.webp" alt="ربع فرخه">
                     <h4>ربع فرخه</h4>
                     <p class="disc">ربع فرخه | ارز كبسه | صلصه دقوس | سلطه خضراء</p>
                     <span class="price" style="font-size: 14px;"><del>215 جنيه</del></span>
                     <p class="price">185 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('ربع فرخه', 185)">أضف للسلة</button>
                 </div>
             </div>
         </section>
@@ -104,21 +110,25 @@
                     <img loading="lazy" src="img/سلطه خضراء.webp" alt="سلطة خضراء">
                     <h4>سلطة خضراء</h4>
                     <p class="price">15 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('سلطه خضراء', 15)">أضف للسلة</button>
                 </div>
                 <div class="card">
                     <img loading="lazy" src="img/سلطه زبادي.jpg" alt="سلطة زبادي">
                     <h4>سلطة زبادي</h4>
                     <p class="price">25 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('سلطه زبادي', 25)">أضف للسلة</button>
                 </div>
                 <div class="card">
                     <img loading="lazy" src="img/طحينه.jpeg" alt="سلطة طحينة">
                     <h4>سلطة طحينة</h4>
                     <p class="price">20 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('سلطه طحينه', 20)">أضف للسلة</button>
                 </div>
                 <div class="card">
                     <img loading="lazy" src="img/سلطه دقوس.webp" alt="سلطة دقوس">
                     <h4>سلطة دقوس</h4>
                     <p class="price">25 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('سلطه دقوس', 25)">أضف للسلة</button>
                 </div>
             </div>
         </section>
@@ -129,41 +139,64 @@
             <div class="card-grid">
                 <div class="card">
                     <img loading="lazy" src="img/زياده ارز.jpg" alt="زيادة ارز">
-                    <h4>زيادة ارز</h4>
+                    <h4>أرز</h4>
                     <span class="price" style="font-size: 14px;"><del>57 جنيه</del></span>
                     <p class="price">50 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('أرز', 50)">أضف للسلة</button>
                 </div>
                 <div class="card">
                     <img loading="lazy" src="img/بطاطس.webp" alt="طبق بطاطس">
-                    <h4>طبق بطاطس</h4>
+                    <h4> بطاطس</h4>
                     <p class="price">35 جنيه</p>
+                    <button class="add-to-cart" onclick="addToCart('بطاطس', 35)">أضف للسلة</button>
                 </div>
                 <div id="trans" class="card" style="background: transparent;" aria-hidden="true"></div>
             </div>
         </section>
+        <div id="cart-container" class="cart-container">
+            <h3>🛒 السلة</h3>
+            <div id="cart-items"></div>
+            <div class="cart-total" id="cart-total">الإجمالي: 0 جنيه</div>
+            <div class="cart-actions">
+                <button class="confirm-order" onclick="submitOrder()">
+                    <i class="fa-solid fa-paper-plane"></i> تأكيد الطلب
+                </button>
+                <div id="order-message" style="display: none;"></div>
+
+            </div>
+        </div>
+
 
         <!-- قسم التواصل -->
-        <div id="contact" class="notes">
-            <p>تقدر تطلب من خلال :</p>
-            <div class="links">
-                <a href="https://www.facebook.com/profile.php?id=61577907203536"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <span>او</span>
-                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            </div>
+    </div>
+    <div id="contact" class="notes">
+        <p>تقدر تطلب من خلال :</p>
+        <div class="links">
+            <a href="https://www.facebook.com/profile.php?id=61577907203536"><i class="fa-brands fa-facebook"></i></a>
+            <span>او</span>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </div>
 
     <!-- زر العودة للأعلى -->
     <button onclick="scrollToTop()" id="btn">↑</button>
 
+    <!-- زر عربة الشراء العائم -->
+    <button id="floating-cart-btn" onclick="scrollToCart()" style="display: none;">
+        <i class="fa-solid fa-cart-shopping"></i> <span id="cart-count">0</span>
+    </button>
+
+
     <!-- الفوتر -->
     <div class="footer">
         <p> copyright © Abdullah Hassan </p>
     </div>
 
+
+
     <!-- اسكريبت -->
     <script>
+        /*start scroll to top*/
         window.onscroll = function () {
             let btn = document.getElementById("btn");
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -179,16 +212,28 @@
                 behavior: "smooth"
             });
         }
+        /*end scroll to top*/
 
-        function toggleMenu() {
-            setTimeout(() => {
-                document.getElementById("navbar").classList.toggle("active");
-            }, 100);
-        }
+        
+                function toggleMenu() {
+    const nav = document.getElementById("navbar");
+                nav.classList.toggle("active");
+  }
+
+  // يقفل المينيو لو المستخدم اختار لينك على الموبايل
+  document.querySelectorAll("#navbar ul li a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        if (window.innerWidth <= 768) {
+                            document.getElementById("navbar").classList.remove("active");
+                        }
+                    });
+  });
+     
+
 
     </script>
 
-
+    <script src="js/cart.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,135 @@
+/* تم نقل هذا الكود في ملف منفصل للتنظيم */
+#cart-container {
+    max-width: 500px;
+    margin: 50px auto 100px;
+    background-color: #fff4ed;
+    border: 2px solid #f2c89c;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cart-container h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #d47b00;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fffdfb;
+    border-bottom: 1px solid #f5d9bd;
+    padding: 10px;
+    font-size: 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  
+  .qty-controls {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .qty-btn {
+    background-color: #f2c89c;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+  
+  .qty-btn:hover {
+    background-color: #d9a875;
+  }
+  
+  .remove-btn {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover {
+    background-color: #e34646;
+  }
+  
+  .cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .cart-actions {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .confirm-order {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .confirm-order:hover {
+    background-color: #c9302c;
+  }
+  
+  #floating-cart-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #d93c3c;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 16px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #floating-cart-btn i {
+    font-size: 20px;
+  }
+  
+  #floating-cart-btn span {
+    background-color: white;
+    color: #d93c3c;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  #order-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .order-error {
+    background-color: #ffe5e5;
+    color: #b10000;
+    border: 1px solid #ff7b7b;
+  }
