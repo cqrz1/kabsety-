@@ -8,8 +8,8 @@
     <!-- og meta tags -->
     <meta property="og:title" content="منيو كبستي – أكل سعودي بيتي في الجيزة" />
     <meta property="og:description" content="فرخة، نص، ربع + سلطات ودقوس. توصيل سريع وجودة ممتازة." />
-    <meta property="og:image" content="https://kabsety.vercel.app/img/1بروفيل.png" />
-    <meta property="og:url" content="https://kabsety.vercel.app/" />
+    <meta property="og:image" content="http://kabesty.iceiy.com/img/1بروفيل.png" />
+    <meta property="og:url" content="http://kabesty.iceiy.com/" />
     <meta property="og:type" content="website" />
 
     <!-- وصف الصفحة (يظهر في نتائج البحث) -->
@@ -214,21 +214,21 @@
         }
         /*end scroll to top*/
 
-        
-                function toggleMenu() {
-    const nav = document.getElementById("navbar");
-                nav.classList.toggle("active");
-  }
 
-  // يقفل المينيو لو المستخدم اختار لينك على الموبايل
-  document.querySelectorAll("#navbar ul li a").forEach((link) => {
-                    link.addEventListener("click", () => {
-                        if (window.innerWidth <= 768) {
-                            document.getElementById("navbar").classList.remove("active");
-                        }
-                    });
-  });
-     
+        function toggleMenu() {
+            const nav = document.getElementById("navbar");
+            nav.classList.toggle("active");
+        }
+
+        // يقفل المينيو لو المستخدم اختار لينك على الموبايل
+        document.querySelectorAll("#navbar ul li a").forEach((link) => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth <= 768) {
+                    document.getElementById("navbar").classList.remove("active");
+                }
+            });
+        });
+
 
 
     </script>

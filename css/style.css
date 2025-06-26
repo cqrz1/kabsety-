@@ -302,19 +302,16 @@ li {
   font-size: 14px;
   cursor: pointer;
   transition: background 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .add-to-cart:hover {
   background-color: #b41d24;
 }
 
-
-
-
 #total-price {
-    font-weight: bold;
-    margin-top: 10px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .add-to-cart {
@@ -334,8 +331,6 @@ li {
   background-color: #e67e22;
   transform: scale(1.03);
 }
-
-
 
 #btn {
   position: fixed;
