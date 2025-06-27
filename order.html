@@ -2,15 +2,15 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تأكيد الطلب - كبستي</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Cairo', sans-serif;
+            background-color: #fefaf5;
             margin: 0;
             padding: 0;
         }
@@ -45,14 +45,14 @@
             max-width: 600px;
             margin: 40px auto;
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         .form-container h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #d4371c;
         }
 
@@ -63,7 +63,7 @@
         .form-group label {
             display: block;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
         .form-group input,
@@ -75,9 +75,15 @@
             font-size: 16px;
         }
 
-        .form-group textarea {
-            resize: vertical;
-            height: 120px;
+        .summary {
+            margin-top: 25px;
+            background-color: #fff3e0;
+            border: 1px dashed #f3c08f;
+            border-radius: 10px;
+            padding: 15px;
+            color: #8b4513;
+            font-weight: bold;
+            line-height: 1.8;
         }
 
         .submit-btn {
@@ -103,11 +109,32 @@
             background-color: #f1f1f1;
             color: #777;
         }
+
+        .success-message {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        .success-message.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
 <body>
-
     <!-- Navbar -->
     <div class="header">
         <div class="logo">
@@ -116,13 +143,6 @@
         </div>
     </div>
 
-    <!-- أضف هذا العنصر قبل الفورم -->
-    <div id="sending-msg" style="display: none; color: green; text-align: center; font-weight: bold; margin-top: 10px;">
-        جاري إرسال الطلب... برجاء الانتظار
-    </div>
-
-
-    <!-- Form -->
     <div class="form-container">
         <h2>تأكيد الطلب</h2>
         <form id="order-form">
@@ -142,33 +162,39 @@
             </div>
 
             <div class="form-group">
-                <label for="orderDetails">تفاصيل الطلب</label>
-                <textarea id="orderDetails" readonly
-                    style="background-color: #f2f2f2; color: #444; font-weight: bold;"></textarea>
+                <label for="notes">ملاحظات إضافية (اختياري)</label>
+                <textarea id="notes" name="notes" placeholder="مثال: بدون طحينة، أو وقت التوصيل..."></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="notes">ملاحظات العميل (اختياري)</label>
-                <textarea id="notes" name="notes" placeholder="ادخل ملاحظاتك ..."></textarea>
+            <div class="summary">
+                <p id="subtotal-text">إجمالي الطلب: ... جنيه</p>
+                <p>سعر التوصيل: 30 جنيه</p>
+                <p id="total-text">الإجمالي شامل التوصيل: ... جنيه</p>
             </div>
 
             <button type="submit" class="submit-btn">إرسال الطلب</button>
+            <div id="success-message" class="success-message">
+                ✅ تم إرسال طلبك بنجاح! سنقوم بالتواصل معك لتأكيد التوصيل في أقرب وقت. شكرًا لاختيارك
+                <strong>كبستي</strong> 💛
+            </div>
+            
+
         </form>
     </div>
 
     <div class="footer">
-        <p>جميع الحقوق محفوظة © Abdullah Hassan</p>
+        <p>جميع الحقوق محفوظة © Abdullah Hassan - Kabsety 2025</p>
     </div>
 
-    <!-- Script -->
     <script>
-        window.addEventListener("DOMContentLoaded", function () {
-            const orderDetailsField = document.getElementById("orderDetails");
-            const savedOrder = localStorage.getItem("orderNotes");
-            if (savedOrder && orderDetailsField) {
-                orderDetailsField.value = savedOrder;
-            }
-        });
+        const DELIVERY_FEE = 30;
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+        const total = subtotal + DELIVERY_FEE;
+
+        document.getElementById("subtotal-text").textContent = `إجمالي الطلب: ${subtotal} جنيه`;
+        document.getElementById("total-text").textContent = `الإجمالي شامل التوصيل: ${total} جنيه`;
 
         document.getElementById("order-form").addEventListener("submit", function (e) {
             e.preventDefault();
@@ -176,39 +202,53 @@
             const name = document.getElementById("name").value;
             const phone = document.getElementById("phone").value;
             const address = document.getElementById("address").value;
-            const orderDetails = document.getElementById("orderDetails").value;
             const notes = document.getElementById("notes").value;
+
+            let items = cart.map(
+                item => `• ${item.name} × ${item.qty} = ${item.qty * item.price} جنيه`
+            ).join("\n");
+
+            const date = new Date().toLocaleString("ar-EG");
 
             const data = {
                 name,
                 phone,
                 address,
-                notes: `${orderDetails}\n\nملاحظات العميل:\n${notes}`,
+                order: items,
+                subtotal: `${subtotal} جنيه`,
+                delivery: `${DELIVERY_FEE} جنيه`,
+                total: `${total} جنيه`,
+                notes,
+                date
             };
 
-            // إظهار رسالة جاري الإرسال
-            document.getElementById("sending-msg").style.display = "block";
-
-            // إرسال الطلب بدون انتظار الرد
-            fetch("https://script.google.com/macros/s/AKfycbwLPIV6l2KNf-AsOrcmFr7DerjvNVAlzz-GJvFQTCg7TK4rUmKHnKoLwvRgfNAXVBh5/exec", {
+            fetch("https://script.google.com/macros/s/AKfycbxf-WWydd5IznX_ayAuiuCGjfIizSzmB_lRmUoOOml6bUzPgwhavpT1kNh8Qhu5MSjW/exec", {
                 method: "POST",
                 mode: "no-cors",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(data)
             });
 
-            // تنظيف السلة والرجوع للصفحة بعد 3 ثواني
+
+            // ✅ هنا نحط الكود بتاع الرسالة:
+            const msg = document.getElementById("success-message");
+            msg.classList.add("show");
+
+            // 🕐 تخفيها بعد 5 ثواني
+            setTimeout(() => {
+                msg.classList.remove("show");
+            }, 5000);
+
+            // ⏳ نرجّع المستخدم للرئيسية بعد شوية
             setTimeout(() => {
                 localStorage.removeItem("cart");
-                localStorage.removeItem("orderNotes");
                 window.location.href = "index.html";
-            }, 3000);
+            }, 5000);
         });
-
     </script>
-
+      
 </body>
 
 </html>

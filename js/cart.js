@@ -90,13 +90,13 @@ function submitOrder() {
   messageContainer.style.display = "none";
   messageContainer.textContent = "";
 
-  if (hour < 9 || hour >= 21) {
-    messageContainer.textContent =
-      "🚫 الطلبات متاحة من 9 صباحًا حتى 9 مساءً فقط";
-    messageContainer.style.display = "block";
-    messageContainer.className = "order-error";
-    return;
-  }
+  // if (hour < 9 || hour >= 21) {
+  //   messageContainer.textContent =
+  //     "🚫 الطلبات متاحة من 9 صباحًا حتى 9 مساءً فقط";
+  //   messageContainer.style.display = "block";
+  //   messageContainer.className = "order-error";
+  //   return;
+  // }
 
   if (cartItems.length === 0) {
     messageContainer.textContent = "🛒 السلة فاضية. من فضلك أضف طلباتك أولًا.";
